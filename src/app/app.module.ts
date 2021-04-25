@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeadingComponent } from './heading/heading.component';
+import { HeroPictureComponent } from './hero-picture/hero-picture.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeadingComponent,
+    HeroPictureComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

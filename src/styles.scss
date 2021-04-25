@@ -1,1 +1,109 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* Elements */
+$main-heading: hsl(0, 0%, 100%);
+$main-paragraph: hsla(0, 0%, 100%, 0.75);
+$stat-headings: hsla(0, 0%, 100%, 0.6);
+
+$card-background: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+
+$inter-regular: 'Inter', sans-serif;
+$inter-bold: 'Inter', sans-serif;
+$lexend-deca: 'Lexend Deca', sans-serif;
+
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: hsl(233, 47%, 7%);
+}
+
+p {
+    font-size: 15px;
+    color: $main-paragraph;
+    font-family: Inter, sans-serif;
+    text-align: center;
+}
+
+.accent {
+    color: $accent;
+}
+
+h1 {
+    color: $main-heading;
+    font-family: $inter-bold;
+    text-align: center;
+}
+
+.attribution {
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+    font-size: 11px;
+    text-align: center;
+}
+
+svg {
+display: none;
+}
+
+$breakpoint-min: 375px;
+$breakpoint-max: 1440px;
+@media (max-width: $breakpoint-min) {
+    body {
+        display: flex;
+
+        .outer-container {
+            .content-card {
+                background-color: $card-background;
+                border-radius: 10px;
+            }
+            .stats {
+                display: flex;
+                flex-direction: column;
+            }
+            .attribution {
+                padding-bottom: 7px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-min + 1) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .outer-container {
+            .content-card {
+                background-color: $card-background;
+                display: flex;
+                border-radius: 10px;
+                padding: 4%;
+                max-width: 100%;
+                margin: 2%;
+            }
+
+            img {
+                border-radius: 0 !important;
+            }
+
+            .hero-picture {
+                order: 2;
+                overflow: clip;
+            }
+            .stats {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            width: 100vw;
+            height: 1vw;
+            margin: 3% 10%;
+            align-items: space-around;
+        }
+    }
+}

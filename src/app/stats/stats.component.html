@@ -1,0 +1,6 @@
+<div class="stats">
+    <div *ngFor="let stats of stats">
+        <h1>{{ formatStat(stats.statNum) }}</h1>
+        <p style="margin-top: -20px;"> {{ stats.item | uppercase }}</p>
+    </div>
+</div>
